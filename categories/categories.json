@@ -1,0 +1,51 @@
+{
+  "id": "5",
+  "parent_category_id": "",
+  "descriptor": {
+    "name": "Pizza",
+    "short_desc": "Veg and Non-Veg pizza",
+    "long_desc": "American and Italian Veg and Non-Veg Pizza",
+    "images": ["https://sellerNP.com/ondc/m005.png"]
+  },
+  "tags": [
+    {
+      "code": "type",
+      "list": [
+        {
+          "code": "type",
+          "value": "custom_menu"
+        }
+      ]
+    },
+    {
+      "code": "timing",
+      "list": [
+        {
+          "code": "day_from",
+          "value": "1"
+        },
+        {
+          "code": "day_to",
+          "value": "5"
+        },
+        {
+          "code": "time_from",
+          "value": "1800"
+        },
+        {
+          "code": "time_to",
+          "value": "2200"
+        }
+      ]
+    },
+    {
+      "code": "display",
+      "list": [
+        {
+          "code": "rank",
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: Your API
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      summary: class Containing context data
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    parent_category_id:
+                      type: string
+                    descriptor:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        short_desc:
+                          type: string
+                        long_desc:
+                          type: string
+                        images:
+                          type: array
+                          items:
+                            type: string
+                    tags:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          list:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                code:
+                                  type: string
+                                value:
+                                  type: string

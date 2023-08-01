@@ -1,0 +1,345 @@
+openapi: 3.0.0
+info:
+  title: Your API
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      summary: class Containing context data
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: 
+    type: string
+  time: 
+    type: object
+    properties: 
+      label: 
+        type: string
+      timestamp: 
+        type: string
+        format: date-time
+  fulfillments: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: string
+        type: 
+          type: string
+        contact: 
+          type: object
+          properties: 
+            phone: 
+              type: string
+            email: 
+              type: string
+  descriptor: 
+    type: object
+    properties: 
+      name: 
+        type: string
+      symbol: 
+        type: string
+      short_desc: 
+        type: string
+      long_desc: 
+        type: string
+      images: 
+        type: array
+        items: 
+          type: string
+  @ondc/org/fssai_license_no: 
+    type: string
+  ttl: 
+    type: string
+  locations: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: string
+        time: 
+          type: object
+          properties: 
+            label: 
+              type: string
+            timestamp: 
+              type: string
+              format: date-time
+            days: 
+              type: string
+            schedule: 
+              type: object
+              properties: 
+                holidays: 
+                  type: array
+                  items: 
+                    type: string
+                    format: date
+                frequency: 
+                  type: string
+                times: 
+                  type: array
+                  items: 
+                    type: string
+            range: 
+              type: object
+              properties: 
+                start: 
+                  type: string
+                end: 
+                  type: string
+        gps: 
+          type: string
+        address: 
+          type: object
+          properties: 
+            locality: 
+              type: string
+            street: 
+              type: string
+            city: 
+              type: string
+            area_code: 
+              type: string
+            state: 
+              type: string
+        circle: 
+          type: object
+          properties: 
+            gps: 
+              type: string
+            radius: 
+              type: object
+              properties: 
+                unit: 
+                  type: string
+                value: 
+                  type: string
+  categories: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: string
+        parent_category_id: 
+          type: string
+        descriptor: 
+          type: object
+          properties: 
+            name: 
+              type: string
+            short_desc: 
+              type: string
+            long_desc: 
+              type: string
+            images: 
+              type: array
+              items: 
+                type: string
+        tags: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              code: 
+                type: string
+              list: 
+                type: array
+                items: 
+                  type: object
+                  properties: 
+                    code: 
+                      type: string
+                    value: 
+                      type: string
+  items: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: string
+        time: 
+          type: object
+          properties: 
+            label: 
+              type: string
+            timestamp: 
+              type: string
+              format: date-time
+        parent_item_id: 
+          type: string
+        descriptor: 
+          type: object
+          properties: 
+            name: 
+              type: string
+            symbol: 
+              type: string
+            short_desc: 
+              type: string
+            long_desc: 
+              type: string
+            images: 
+              type: array
+              items: 
+                type: string
+        quantity: 
+          type: object
+          properties: 
+            unitized: 
+              type: object
+              properties: 
+                measure: 
+                  type: object
+                  properties: 
+                    unit: 
+                      type: string
+                    value: 
+                      type: string
+            available: 
+              type: object
+              properties: 
+                count: 
+                  type: string
+            maximum: 
+              type: object
+              properties: 
+                count: 
+                  type: string
+        price: 
+          type: object
+          properties: 
+            currency: 
+              type: string
+            value: 
+              type: string
+            maximum_value: 
+              type: string
+        category_id: 
+          type: string
+        category_ids: 
+          type: array
+          items: 
+            type: string
+        fulfillment_id: 
+          type: string
+        location_id: 
+          type: string
+        related: 
+          type: boolean
+        recommended: 
+          type: boolean
+        @ondc/org/returnable: 
+          type: boolean
+        @ondc/org/cancellable: 
+          type: boolean
+        @ondc/org/return_window: 
+          type: string
+        @ondc/org/seller_pickup_return: 
+          type: boolean
+        @ondc/org/time_to_ship: 
+          type: string
+        @ondc/org/available_on_cod: 
+          type: boolean
+        @ondc/org/contact_details_consumer_care: 
+          type: string
+        tags: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              code: 
+                type: string
+              list: 
+                type: array
+                items: 
+                  type: object
+                  properties: 
+                    code: 
+                      type: string
+                    value: 
+                      type: string
+  offers: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: string
+        descriptor: 
+          type: object
+          properties: 
+            code: 
+              type: string
+            images: 
+              type: array
+              items: 
+                type: string
+        location_ids: 
+          type: array
+          items: 
+            type: string
+        item_ids: 
+          type: array
+          items: 
+            type: string
+        time: 
+          type: object
+          properties: 
+            label: 
+              type: string
+            range: 
+              type: object
+              properties: 
+                start: 
+                  type: string
+                  format: date-time
+                end: 
+                  type: string
+                  format: date-time
+        tags: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              code: 
+                type: string
+              list: 
+                type: array
+                items: 
+                  type: object
+                  properties: 
+                    code: 
+                      type: string
+                    value: 
+                      type: string
+  tags: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        code: 
+          type: string
+        list: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              code: 
+                type: string
+              value: 
+                type: string
+
